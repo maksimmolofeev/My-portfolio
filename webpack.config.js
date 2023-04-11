@@ -1,15 +1,29 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // import path from 'path';
 // import HtmlWebpackPlugin from 'html-webpack-plugin';
 // import webpack from 'webpack'
+const PORT = 3000
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: path.resolve(__dirname, 'src', 'index.js'),
+    devtool: 'inline-source-map',
+    devServer: {
+        port: PORT,
+        open: true,
+        hot: true
+    },
+    resolve: {
+        preferAbsolute: true,
+        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+        mainFiles: ['index'],
+        alias: {}
+    },
     output: {
-        filename: '[name]_[contenthash].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'build'),
         clean: true
     },
@@ -17,7 +31,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html')
         }),
-        new webpack.ProgressPlugin()
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash:8].css',
+            chunkFilename: 'css/[name].[contenthash:8].css'
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [
@@ -30,7 +49,23 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            }
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                auto: (resPath) => Boolean(resPath.includes('.module.')),
+                                localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                            },
+                        }
+                    },
+                    "sass-loader",
+                ],
+            },
         ]
     }
 };
