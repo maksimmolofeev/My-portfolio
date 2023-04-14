@@ -4,9 +4,8 @@
 @import './theme/dark.scss';
 
 .app {
-    font-size: var(--font-m);
+    font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
-
-    height: 100vh;
+    min-height: 100vh;
 }

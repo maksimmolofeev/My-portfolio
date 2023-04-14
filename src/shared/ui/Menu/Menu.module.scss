@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.link {
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-weight: 400;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}

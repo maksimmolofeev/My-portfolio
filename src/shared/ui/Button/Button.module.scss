@@ -1,0 +1,19 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.clear {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.outline {
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+    color: var(--primary-color);
+    background: none;
+}

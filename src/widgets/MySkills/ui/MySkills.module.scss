@@ -1,0 +1,37 @@
+.my_skills {
+    margin-top: 60px;
+}
+
+.content {
+    min-height: 80px;
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    color: var(--secondary-color)
+    
+}
+
+.skill {
+    font: var(--font-m);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}

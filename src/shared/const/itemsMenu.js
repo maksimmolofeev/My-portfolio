@@ -1,0 +1,1 @@
+export const items = [{value: 'Обо мне'}, {value: 'Навыки'},{value: 'Проекты'},{value: 'Контакты'},]
