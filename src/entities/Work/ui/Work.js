@@ -9,7 +9,7 @@ export const Work = ({work}) => {
             <div className={cls.info}>
                 <h3 className={cls.name}>{work.name}</h3>
                 <p className={cls.description}>{work.description}</p>
-                <p className={cls.stack}><span>STACK: </span>{work.stack}</p>
+                <p className={cls.stack}><span className={cls.stack_title}>STACK: </span>{work.stack}</p>
                 <div className={cls.buttons}>
                     <a href="">
                         <Button btnTheme={Theme.OUTLINE}>
