@@ -23,7 +23,15 @@ export const Navbar = ({setActive, active}) => {
     return (
         <header className={cls.header}>
             <div className={cls.content}>
-                <Link className={cls.logo}>
+                <Link 
+                    className={cls.logo}
+                    to='aboutMe'
+                    hashSpy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    onClick={() => setActive(false)}
+                >
                     <span className={cls.logo_primary}>{'<М'}</span>
                     аксим <br/> Молофее
                     <span className={cls.logo_primary}>{'в/>'}</span>

@@ -7,6 +7,8 @@ import { useState } from "react";
 import { AboutMe } from "widgets/AboutMe";
 import { MySkills } from "widgets/MySkills";
 import { MyWorks } from "widgets/MyWorks";
+import { Contacts } from "widgets/Contacts";
+import { Footer } from "widgets/Footer";
 
 
 const App = () => {
@@ -23,7 +25,9 @@ const App = () => {
             <AboutMe />
             <MySkills />
             <MyWorks />
-            <BurgerMenu items={items} active={menuActive}/>
+            <Contacts />
+            <Footer />
+            <BurgerMenu items={items} active={menuActive} setActive={setMenuActive}/>
         </div>
     );
 }

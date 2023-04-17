@@ -1,0 +1,61 @@
+.contacts {
+    margin-top: 80px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.title {
+    font: var(--font-xxl);
+    margin-bottom: 35px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 60px;
+}
+
+.info {
+    max-width: 450px;
+}
+
+.text {
+    font: var(--font-l);
+    color: var(--secondary-color);
+    margin-bottom: 35px;
+}
+
+.links {
+
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font: var(--font-l);
+    color: var(--primary-color);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 680px) {
+    .container {
+        flex-direction: column;
+    }
+}

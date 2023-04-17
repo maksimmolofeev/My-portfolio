@@ -3,13 +3,17 @@ import { skills } from "shared/const/skills";
 import cls from "./MySkills.module.scss"
 
 export const MySkills = () => {
+
     return (
-        <section className={cls.my_skills}>
+        <section name='skills' className={cls.my_skills}>
             <div className={cls.content}>
                 <h2 className={cls.title}>Стэк & Технологии</h2>
                 <div className={cls.skills}>
                     {skills.map(skill => 
-                        <div className={cls.skill}>
+                        <div 
+                            key={skill.id}
+                            className={`${cls.skill} ${skill.id % 2 === 0 ? cls.skill_primary : cls.skill_secondary}`}
+                        >
                             <IconContext.Provider value={{className: `${cls.icons}`}}>
                                 {skill.icons}
                             </IconContext.Provider>

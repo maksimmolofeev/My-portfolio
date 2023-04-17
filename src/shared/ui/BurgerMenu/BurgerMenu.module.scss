@@ -8,6 +8,7 @@
     transition: all 0.3s;
     &.active {
         transform: translateX(0);
+        backdrop-filter: blur(10px)
     }
 }
 
@@ -21,4 +22,6 @@
 
 .link {
     margin-bottom: 15px;
+    font: var(--font-xl);
+    color: var(--secondary-color);
 }

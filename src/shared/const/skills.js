@@ -17,62 +17,77 @@ import { SiAxios } from "react-icons/si";
 
 export const skills = [
     {
+        id: 1,
         name: 'HTML5',
         icons: <IoLogoHtml5 />
     },
     {
+        id: 2,
         name: 'CSS3',
         icons: <IoLogoCss3 />
     },
     {
+        id: 3,
         name: 'JavaScript',
         icons: <IoLogoJavascript />
     },
     {
+        id: 4,
         name: 'React',
         icons: <GrReactjs />
     },
     {
+        id: 5,
         name: 'TypeScript',
         icons: <SiTypescript />
     },
     {
+        id: 6,
         name: 'Redux',
         icons: <SiRedux />
     },
     {
+        id: 7,
         name: 'StoryBook',
         icons: <SiStorybook />
     },
     {
+        id: 8,
         name: 'Jest',
         icons: <SiJest />
     },
     {
+        id: 9,
         name: 'Github',
         icons: <FaGithub />
     },
     {
+        id: 10,
         name: 'Figma',
         icons: <SiFigma />
     },
     {
+        id: 11,
         name: 'Router',
         icons: <SiReactrouter />
     },
     {
+        id: 12,
         name: 'Bootstrap',
         icons: <SiBootstrap />
     },
     {
+        id: 13,
         name: 'Webpack',
         icons: <SiWebpack />
     },
     {
+        id: 14,
         name: 'Eslint',
         icons: <SiEslint />
     },
     {
+        id: 15,
         name: 'Axios',
         icons: <SiAxios />
     }

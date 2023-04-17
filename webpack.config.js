@@ -2,9 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// import path from 'path';
-// import HtmlWebpackPlugin from 'html-webpack-plugin';
-// import webpack from 'webpack'
+const ReactRefreshWebpackPlugin = require('react-refresh-webpack-plugin');
+
 const PORT = 3000
 
 module.exports = {
@@ -36,7 +35,8 @@ module.exports = {
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        // new webpack.HotModuleReplacementPlugin(),
+        // new ReactRefreshWebpackPlugin(),
     ],
     module: {
         rules: [
@@ -71,7 +71,7 @@ module.exports = {
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+                test: /\.(png|jpe?g|gif|woff2|woff|pdf)$/i,
                 use: [
                     {
                         loader: 'file-loader',

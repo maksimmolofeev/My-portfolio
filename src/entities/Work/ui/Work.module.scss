@@ -1,0 +1,50 @@
+.work {
+    display: flex;
+    gap: 30px;
+}
+
+.info {
+}
+
+.name {
+    font: var(--font-xl);
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.description {
+    font: var(--font-l);
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.stack {
+    font: var(--font-l);
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .img {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .work {
+        flex-direction: column;
+    }
+
+    .block_img {
+        margin: 0 auto;
+    }
+
+    .img {
+        width: 90vw;
+    }
+}
