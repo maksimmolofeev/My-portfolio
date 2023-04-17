@@ -24,7 +24,7 @@ export const contacts = [
     },
     {
         id: 4,
-        name: 'HeadHunter.ru/maksimmolofeev',
+        name: 'hh.ru/maksimmolofeev',
         icon: <BsFillBriefcaseFill />,
         url: 'https://hh.ru/resume/46aac8a6ff0bd2c1900039ed1f495556684e48'
     },

@@ -20,6 +20,11 @@ export const Navbar = ({setActive, active}) => {
         window.addEventListener('resize', handleResize);
     }, [width])
 
+    const closeBurgerMenu = () => {
+        if (active === true) {
+            setActive(false)
+        }
+    }
     return (
         <header className={cls.header}>
             <div className={cls.content}>
@@ -30,7 +35,7 @@ export const Navbar = ({setActive, active}) => {
                     smooth={true}
                     offset={-80}
                     duration={500}
-                    onClick={() => setActive(false)}
+                    onClick={closeBurgerMenu}
                 >
                     <span className={cls.logo_primary}>{'<М'}</span>
                     аксим <br/> Молофее
