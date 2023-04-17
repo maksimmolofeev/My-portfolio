@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const ReactRefreshWebpackPlugin = require('react-refresh-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const PORT = 3000
 
@@ -28,15 +28,15 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public', 'index.html')
+            template: path.resolve(__dirname, 'public', 'index.html'),
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
-        // new webpack.HotModuleReplacementPlugin(),
-        // new ReactRefreshWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new FaviconsWebpackPlugin(path.resolve(__dirname, 'public', 'favicon.ico'))
     ],
     module: {
         rules: [
@@ -71,7 +71,7 @@ module.exports = {
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(png|jpe?g|gif|woff2|woff|pdf)$/i,
+                test: /\.(png|jpe?g|gif|woff2|woff|pdf|ico)$/i,
                 use: [
                     {
                         loader: 'file-loader',
