@@ -14,7 +14,7 @@ export const Contacts = () => {
                         <p className={cls.text}>Я в поисках работы в качестве Frontend разработчика. Рассматриваю как удаленный так и офисный формат работы.</p>
                         <a
                             href="Maksim_Molofeev_CV.pdf"
-                            download
+                            download='Maksim_Molofeev_CV.pdf'
                         >
                             <Button btnTheme={Theme.OUTLINE}>
                                 Скачать CV

@@ -31,7 +31,7 @@ export const AboutMe = () => {
                         <a
                             className={cls.link_cv}
                             href="Maksim_Molofeev_CV.pdf"
-                            download
+                            download='Maksim_Molofeev_CV.pdf'
                         >
                             <Button btnTheme={Theme.OUTLINE}>
                                 Скачать CV
